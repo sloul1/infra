@@ -53,19 +53,23 @@ SCSI3_DISK=/dev/disk/by-id/[unique_disk_id_string]
 
 Starting Truenas might take some more time than normally as there are some disks missing.
 
-Save the current configuration.
+
 ![save configuration](image-2.png)
+Save the current configuration.  
 
 
+
+![install update](image-3.png)  
 Install the available update.
-![install update](image-3.png)
 
 
 
-### Shut down Truenas, attach the data disks and start Truenas again
+### 5. Shut down Truenas
 
 ![shut down before attaching the data disks](image-4.png)
 
+
+### 6. Attach the data disks
 ```bash
 ./attach_disks_truenas
 ```  
@@ -77,7 +81,7 @@ update VM 101: -scsi1 /dev/disk/by-id/[unique_disk_id_string]
 update VM 102: -scsi1 /dev/disk/by-id/[unique_disk_id_string]
 update VM 103: -scsi1 /dev/disk/by-id/[unique_disk_id_string]
 ```
-
+### 7. start Truenas again
 Start the Truenas VM with corresponding ID.  
 
 ```bash
@@ -90,7 +94,8 @@ Login and check the current system info.
 
 Enjoy!
 
-Truenas might sometimes  have trouble showing correct `used space` of zpools on GUI.
+Truenas might sometimes have **trouble showing correct used space of zpools** on the GUI.  
+
 ![used space unknown](<Screenshot From 2026-11-17 15-06-27.png>)  
 
 However the CLI seems to show the information correctly.  
