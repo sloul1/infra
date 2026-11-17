@@ -89,3 +89,19 @@ Login and check the current system info.
 ![System is up to date!](image-5.png)
 
 Enjoy!
+
+Truenas might sometimes  have trouble showing correct `used space` of zpools on GUI.
+![used space unknown](<Screenshot From 2026-11-17 15-06-27.png>)  
+
+However the CLI seems to show the information correctly.  
+
+```bash
+zpool list
+```  
+
+```bash
+NAME        SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
+boot-pool    63G  36.6G  26.4G        -         -    35%    58%  1.00x    ONLINE  -
+fast256     232G  58.4G   174G        -         -     6%    25%  1.00x    ONLINE  /mnt
+tank       14.5T  5.01T  9.54T        -         -     3%    34%  1.00x    ONLINE  /mnt
+```
