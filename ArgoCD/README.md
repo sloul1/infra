@@ -3,7 +3,7 @@
 > [!WARNING]
 > CHECK THE FACTS!  
 
-> [!INFO]
+> [!NOTE]
 > Brave AI search prompt:
 > Tell me about argocd and compare it to other similar tools in chart.
 
